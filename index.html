@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conscientização Antirracista</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <h1 class="app-title">Conscientização Antirracista</h1>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main id="app">
+    <!-- Tela Início -->
+    <section id="tela-inicio" class="tela">
+      <h2>Bem-vindo(a)</h2>
+      <p class="lead">
+        Este aplicativo promove a conscientização e o combate ao racismo no Brasil.
+        Explore os tópicos, conheça medidas de enfrentamento e participe do quiz.
+      </p>
+
+      <!-- Nova imagem -->
+      <div class="card">
+        <h3>Unidos contra o Racismo</h3>
+        <img src="img/img1.png"
+             alt="Mãos unidas de várias cores representando união e diversidade">
+        <p>
+          Juntos, podemos construir uma sociedade mais justa, inclusiva e solidária.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Objetivos</h3>
+        <ul class="lista">
+          <li>Informar sobre o racismo estrutural e seus impactos sociais.</li>
+          <li>Apresentar medidas e direitos para enfrentamento.</li>
+          <li>Estimular reflexão e ação cidadã.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tela Problemas -->
+    <section id="tela-problemas" class="tela hidden">
+      <h2>Principais problemas</h2>
+      <div class="card">
+        <h3>Problemas identificados</h3>
+        <ul class="lista">
+          <li>Desigualdade social e econômica.</li>
+          <li>Racismo estrutural em instituições.</li>
+          <li>Violência racial e discriminação policial.</li>
+          <li>Preconceito no mercado de trabalho.</li>
+          <li>Exclusão cultural e educacional.</li>
+          <li>Racismo recreativo (piadas, estereótipos).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tela Medidas -->
+    <section id="tela-medidas" class="tela hidden">
+      <h2>Medidas de combate</h2>
+      <div class="card">
+        <h3>Soluções propostas</h3>
+        <ul class="lista">
+          <li>Educação antirracista nas escolas.</li>
+          <li>Políticas de cotas e ações afirmativas.</li>
+          <li>Leis mais rigorosas contra o racismo.</li>
+          <li>Valorização da cultura afro-brasileira.</li>
+          <li>Inclusão no mercado de trabalho.</li>
+          <li>Campanhas de conscientização social.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tela Quiz -->
+    <section id="tela-quiz" class="tela hidden">
+      <h2>Quiz</h2>
+      <form id="quiz-form" class="quiz">
+        <fieldset>
+          <legend>Pergunta:</legend>
+          <p>Qual lei determina o ensino da história e cultura afro-brasileira nas escolas?</p>
+          <label class="opcao"><input type="radio" name="q1" value="1"> Lei 7.716/1989</label>
+          <label class="opcao"><input type="radio" name="q1" value="2"> Lei 10.639/2003</label>
+          <label class="opcao"><input type="radio" name="q1" value="3"> Lei 9.394/1996</label>
+          <button type="submit" class="btn">Enviar</button>
+          <p id="quiz-resultado" class="resultado"></p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <!-- Navegação inferior -->
+  <nav class="app-nav" role="navigation" aria-label="Navegação principal">
+    <button class="tab-btn ativo" data-target="tela-inicio">🏠 Início</button>
+    <button class="tab-btn" data-target="tela-problemas">⚠️ Problemas</button>
+    <button class="tab-btn" data-target="tela-medidas">✅ Medidas</button>
+    <button class="tab-btn" data-target="tela-quiz">📝 Quiz</button>
+  </nav>
+
+  <!-- Script -->
+  <script src="app.js"></script>
+</body>
+</html>
