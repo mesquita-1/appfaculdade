@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#000000">
+
+<!-- iOS (se instalar via Safari) -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="img/img1.png">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conscientização Antirracista</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
   <!-- Header -->
@@ -99,6 +106,12 @@
     <button class="tab-btn" data-target="tela-medidas">✅ Medidas</button>
     <button class="tab-btn" data-target="tela-quiz">📝 Quiz</button>
   </nav>
+
+  <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js");
+}
+</script>
 
   <!-- Script -->
   <script src="app.js"></script>
