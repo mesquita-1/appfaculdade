@@ -19,15 +19,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon" href="img/img1.png">
-  
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body> 
+<body>
   <!-- Skip link -->
   <a href="#app" class="skip-link">Pular para conteúdo principal</a>
 
-  <!-- AppBar (visual de app) -->
+  <!-- AppBar -->
   <header class="app-header">
     <div class="app-bar">
       <div class="app-bar__left">
@@ -102,7 +101,7 @@
         </ul>
       </article>
 
-      <!-- Fato/Marco legal (coerência do quiz) -->
+      <!-- Base legal -->
       <article class="card highlight">
         <h3>Base legal e um marco recente</h3>
         <ul class="lista">
@@ -116,7 +115,7 @@
       </article>
     </section>
 
-    <!-- Tela Quiz (3 perguntas) -->
+    <!-- Tela Quiz -->
     <section id="tela-quiz" class="tela hidden" aria-labelledby="quiz-title">
       <h2 id="quiz-title">Quiz</h2>
       <form id="quiz-form" class="quiz">
@@ -124,28 +123,29 @@
           <legend>Perguntas sobre legislação e políticas</legend>
 
           <!-- Q1 -->
-<div class="qblock">
-  <p><strong>1)</strong> Qual lei tornou obrigatório o ensino da história e cultura afro-brasileira nas escolas?</p>
-  <label class="opcao"><input type="radio" name="q1" value="A"> Lei 7.716/1989</label>
-  <label class="opcao"><input type="radio" name="q1" value="B"> Lei 10.639/2003</label>
-  <label class="opcao"><input type="radio" name="q1" value="C"> Lei 9.394/1996</label>
-</div>
+          <div class="qblock">
+            <p><strong>1)</strong> Qual lei tornou obrigatório o ensino da história e cultura afro-brasileira nas escolas?</p>
+            <label class="opcao"><input type="radio" name="q1" value="A"> Lei 7.716/1989</label>
+            <label class="opcao"><input type="radio" name="q1" value="B"> Lei 10.639/2003</label>
+            <label class="opcao"><input type="radio" name="q1" value="C"> Lei 9.394/1996</label>
+          </div>
 
-<!-- Q2 -->
-<div class="qblock">
-  <p><strong>2)</strong> Qual diploma legal é conhecido como <em>Estatuto da Igualdade Racial</em>?</p>
-  <label class="opcao"><input type="radio" name="q2" value="A"> Lei 12.288/2010</label>
-  <label class="opcao"><input type="radio" name="q2" value="B"> Lei 10.639/2003</label>
-  <label class="opcao"><input type="radio" name="q2" value="C"> Lei 13.146/2015</label>
-</div>
+          <!-- Q2 -->
+          <div class="qblock">
+            <p><strong>2)</strong> Qual diploma legal é conhecido como <em>Estatuto da Igualdade Racial</em>?</p>
+            <label class="opcao"><input type="radio" name="q2" value="A"> Lei 12.288/2010</label>
+            <label class="opcao"><input type="radio" name="q2" value="B"> Lei 10.639/2003</label>
+            <label class="opcao"><input type="radio" name="q2" value="C"> Lei 13.146/2015</label>
+          </div>
 
-<!-- Q3 -->
-<div class="qblock">
-  <p><strong>3)</strong> O que a <em>Lei 14.532/2023</em> estabeleceu sobre a injúria racial?</p>
-  <label class="opcao"><input type="radio" name="q3" value="A"> Deixou de ser crime</label>
-  <label class="opcao"><input type="radio" name="q3" value="B"> Passou a ser equiparada ao crime de racismo</label>
-  <label class="opcao"><input type="radio" name="q3" value="C"> Tornou-se apenas contravenção penal</label>
-</div>
+          <!-- Q3 -->
+          <div class="qblock">
+            <p><strong>3)</strong> O que a <em>Lei 14.532/2023</em> estabeleceu sobre a injúria racial?</p>
+            <label class="opcao"><input type="radio" name="q3" value="A"> Deixou de ser crime</label>
+            <label class="opcao"><input type="radio" name="q3" value="B"> Passou a ser equiparada ao crime de racismo</label>
+            <label class="opcao"><input type="radio" name="q3" value="C"> Tornou-se apenas contravenção penal</label>
+          </div>
+
           <button type="submit" class="btn">Enviar respostas</button>
           <div id="quiz-resultado" class="resultado" role="status" aria-live="polite"></div>
         </fieldset>
@@ -153,7 +153,7 @@
     </section>
   </main>
 
-  <!-- Navegação -->
+  <!-- Navegação inferior (tabs) -->
   <nav class="app-nav" role="navigation" aria-label="Navegação principal">
     <button class="tab-btn ativo" data-target="tela-inicio" aria-pressed="true" aria-describedby="nav-inicio">🏠 Início</button>
     <button class="tab-btn" data-target="tela-problemas" aria-pressed="false" aria-describedby="nav-problemas">⚠️ Problemas</button>
@@ -168,9 +168,8 @@
     <div id="nav-medidas">Medidas e base legal do combate ao racismo no Brasil</div>
     <div id="nav-quiz">Quiz educativo baseado no conteúdo anterior</div>
   </div>
-  
 
-  <!-- Footer -->
+  <!-- Footer global -->
   <footer class="app-footer">
     <p>
       Este aplicativo foi desenvolvido em formato <strong>PWA</strong>, 
@@ -178,9 +177,8 @@
       do curso de <strong>Análise e Desenvolvimento de Sistemas</strong>.
     </p>
   </footer>
-</body>
-</html>
 
+  <!-- Script principal: precisa estar DENTRO do body -->
   <script src="app.js"></script>
 </body>
 </html>
