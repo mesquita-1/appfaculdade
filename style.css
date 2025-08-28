@@ -116,3 +116,16 @@ body{
 /* Acessibilidade / Performance */
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 .card,.btn,.tab-btn{will-change:transform}
+
+.app-footer {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--muted);
+  padding: 18px;
+  margin-bottom: 70px; /* espaço para não colar na nav inferior */
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.app-footer strong {
+  color: var(--brand-2);
+}
+
