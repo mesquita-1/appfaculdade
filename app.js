@@ -19,13 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // rota inicial
   mostrar(localStorage.getItem('rota') || 'tela-inicio');
-  tabs.forEach(btn => btn.addEventListener('click', () => mostrar(btn.dataset.target)));
+
+  // eventos de clique nas abas
+  tabs.forEach(btn => btn.addEventListener('click', () => {
+    const target = btn.dataset.target;
+    if (target) mostrar(target);
+  }));
 
   // QUIZ (3 perguntas)
   const form = document.getElementById('quiz-form');
   const resEl = document.getElementById('quiz-resultado');
 
-  if (form) {
+  if (form && resEl) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 

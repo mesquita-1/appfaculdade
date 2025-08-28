@@ -1,4 +1,4 @@
-const CACHE_NAME = 'antirracismo-v1.6';
+const CACHE_NAME = 'antirracismo-v1.7';
 const urlsToCache = [
   './',
   './index.html',
@@ -21,14 +21,14 @@ self.addEventListener('activate', event => {
   clients.claim();
 });
 
+// Cache-first para estáticos; network-first para navegação (SPA fallback)
 self.addEventListener('fetch', event => {
   const req = event.request;
 
-  // Navegação HTML: network-first com fallback SPA
   if (req.mode === 'navigate') {
     event.respondWith(fetch(req).catch(() => caches.match('./index.html')));
     return;
   }
-  // Estáticos: cache-first
+
   event.respondWith(caches.match(req).then(res => res || fetch(req)));
 });
