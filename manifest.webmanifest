@@ -1,14 +1,16 @@
 {
-  "name": "App Faculdade",
-  "short_name": "Faculdade",
-  "id": "/appfaculdade/",
-  "start_url": "/appfaculdade/",
-  "scope": "/appfaculdade/",
+  "name": "Conscientização Antirracista",
+  "short_name": "Anti-Racismo",
+  "description": "App educativo sobre conscientização e combate ao racismo no Brasil",
+  "start_url": "./?source=pwa",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#1e1b4b",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait",
+  "lang": "pt-BR",
   "icons": [
-    { "src": "img/icon-512.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
-    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "img/img1.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable any" },
+    { "src": "img/img1.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable any" }
   ]
 }
